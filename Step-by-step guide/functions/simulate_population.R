@@ -48,11 +48,11 @@ sample_subset <- seq(from=sample_first_y, to=num.years, by=1) # Years of simulat
 estimation_year = 28
 
 # Load Michigan mainland
-UP <- st_read("./GIS/UP_Michigan_mainland.shp") %>% # Upper Peninsula borders
+UP <- st_read("./Data/UP_Michigan_mainland.shp") %>% # Upper Peninsula borders
   st_transform(32616)
 
 # Load Michigan counties
-counties <- st_read("./GIS/Counties_(v17a).shp") %>% 
+counties <- st_read("./Data/Counties_(v17a).shp") %>% 
   st_transform(32616) %>%
   st_intersection(UP) 
 
